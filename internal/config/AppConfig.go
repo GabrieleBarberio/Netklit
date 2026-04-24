@@ -2,6 +2,7 @@ package config
 
 import (
 	"strings"
+	"time"
 
 	"netklit/pkg/logger"
 
@@ -15,8 +16,8 @@ type AppConfig struct {
 		Port string `mapstructure:"port"`
 	} `mapstructure:"app"`
 	Options struct {
-		Timeout int `mapstructure:"timeout"`
-		Workers int `mapstructure:"workers"`
+		Timeout time.Duration `mapstructure:"timeout"`
+		Workers int           `mapstructure:"workers"`
 	} `mapstructure:"options"`
 	NS    string `mapstructure:"namespace"`
 	Owner string `mapstructure:"owner"`

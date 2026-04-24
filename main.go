@@ -2,6 +2,7 @@ package main
 
 import (
 	"netklit/cmd"
+	_ "netklit/cmd/scan"
 	"netklit/internal/config"
 	"netklit/pkg/logger"
 )
